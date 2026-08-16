@@ -3195,3 +3195,52 @@ body .vertical-tab-nav-item.is-active .svg-icon {
   --bold-italic-highlight-bg: hsl(28, 62%, 30%);
   --strikethrough-highlight-bg: hsl(55, 48%, 26%);
 }
+
+/* =====================================================================
+ * Primary Mono — mod-warning 按钮改蓝 + 表格正文白底
+ *
+ * 「退出登录」是 button.mod-warning，读 --background-modifier-error，
+ * 该变量指向 --color-l-red-30。按用户要求统一为强调蓝，只作用于按钮，
+ * 不动 --background-modifier-error 本身（错误提示背景仍走原变量）。
+ *
+ * 表格只有表头保留浅蓝，正文行与交替列一律白底。
+ * ===================================================================== */
+
+body button:not(button.clickable-icon).mod-warning,
+body button:not(button.clickable-icon).mod-warning:hover,
+body button:not(button.clickable-icon).mod-warning:active,
+body button:not(button.clickable-icon).mod-warning:focus-visible {
+  background-color: hsl(209, 88%, 54%) !important;
+  color: hsl(0, 0%, 100%) !important;
+}
+
+.theme-dark body button:not(button.clickable-icon).mod-warning,
+.theme-dark body button:not(button.clickable-icon).mod-warning:hover,
+.theme-dark body button:not(button.clickable-icon).mod-warning:active,
+.theme-dark body button:not(button.clickable-icon).mod-warning:focus-visible {
+  background-color: hsl(209, 88%, 58%) !important;
+}
+
+.theme-light {
+  --table-background: hsl(0, 0%, 100%);
+  --table-column-alt-background: hsl(0, 0%, 100%);
+}
+
+body .markdown-rendered tbody td,
+body .markdown-rendered tbody tr,
+body .markdown-preview-view tbody td,
+body .markdown-preview-view tbody tr {
+  background-color: var(--table-background);
+}
+
+/* 表头必须整行同色。
+ * 上一步把 --table-column-alt-background 设为白色，而 Primary 的交替列
+ * 着色会一并盖到 thead 的单元格上，导致表头一蓝一白。这里让表头背景
+ * 压过交替列规则。
+ */
+body .markdown-rendered thead th,
+body .markdown-rendered thead tr,
+body .markdown-preview-view thead th,
+body .markdown-preview-view thead tr {
+  background-color: var(--table-header-background) !important;
+}
