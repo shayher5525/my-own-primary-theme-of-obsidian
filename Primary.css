@@ -4140,3 +4140,84 @@ body .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active
 .theme-dark body .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active {
   background-color: hsl(209, 88%, 58%);
 }
+
+/* =====================================================================
+ * Primary Mono — 设置页选中项上色 + 高亮五档蓝
+ *
+ * 一、设置页选中项：Primary 用 `.is-active:nth-child(3n+1|2|3)` 三条规则
+ *     按位置轮换 --alternating-color-1/2/3 作背景，根本不读
+ *     --settings-nav-item-bg-active。而那三个变量书签文件夹、标签关闭按钮
+ *     等处也在用，改变量会波及无关组件，故用定向规则加 !important 压过
+ *     那三条 nth-child。
+ *
+ * 二、高亮恢复五档区分，但统一走蓝色系：靠明度与色相微差拉开层次，
+ *     不再用琥珀／朱红／黄绿。底色一律取高明度（浅色模式 80~90%），
+ *     确保正文深色字压在上面仍清晰；深色模式反过来取低明度配浅字。
+ *     用不透明色而非半透明，避免叠在不同底色上导致对比度漂移。
+ * ===================================================================== */
+
+.theme-light {
+  --text-highlight-bg-rgb: 186, 224, 248;
+  --text-highlight-bg: hsl(204, 82%, 87%);
+
+  --normal-highlight-bg: hsl(204, 82%, 87%);
+  --bold-highlight-bg: hsl(212, 80%, 80%);
+  --italic-highlight-bg: hsl(188, 72%, 84%);
+  --bold-italic-highlight-bg: hsl(226, 78%, 87%);
+  --strikethrough-highlight-bg: hsl(206, 30%, 88%);
+
+  --normal-highlight-color: hsl(210, 30%, 18%);
+  --bold-highlight-color: hsl(210, 30%, 18%);
+  --italic-highlight-color: hsl(210, 30%, 18%);
+  --bold-italic-highlight-color: hsl(210, 30%, 18%);
+}
+
+.theme-dark {
+  --text-highlight-bg-rgb: 21, 74, 112;
+  --text-highlight-bg: hsl(204, 68%, 26%);
+
+  --normal-highlight-bg: hsl(204, 68%, 26%);
+  --bold-highlight-bg: hsl(212, 70%, 34%);
+  --italic-highlight-bg: hsl(188, 62%, 24%);
+  --bold-italic-highlight-bg: hsl(226, 66%, 34%);
+  --strikethrough-highlight-bg: hsl(206, 22%, 30%);
+
+  --normal-highlight-color: hsl(205, 40%, 92%);
+  --bold-highlight-color: hsl(205, 40%, 92%);
+  --italic-highlight-color: hsl(205, 40%, 92%);
+  --bold-italic-highlight-color: hsl(205, 40%, 92%);
+}
+
+/* 设置页选中项：压过三条 nth-child 轮换色规则 */
+.modal .vertical-tab-nav-item.is-active,
+.modal .vertical-tab-nav-item.is-active:nth-child(3n+1),
+.modal .vertical-tab-nav-item.is-active:nth-child(3n+2),
+.modal .vertical-tab-nav-item.is-active:nth-child(3n+3) {
+  background: hsl(209, 88%, 54%) !important;
+  color: hsl(0, 0%, 100%) !important;
+}
+
+.theme-dark .modal .vertical-tab-nav-item.is-active,
+.theme-dark .modal .vertical-tab-nav-item.is-active:nth-child(3n+1),
+.theme-dark .modal .vertical-tab-nav-item.is-active:nth-child(3n+2),
+.theme-dark .modal .vertical-tab-nav-item.is-active:nth-child(3n+3) {
+  background: hsl(209, 88%, 58%) !important;
+}
+
+/* 设置弹出为独立窗口时，DOM 外层可能没有 .modal，上面那组会落空。
+ * 这里补一组不依赖 .modal 的同效规则作兜底。
+ */
+body .vertical-tab-nav-item.is-active,
+body .vertical-tab-nav-item.is-active:nth-child(3n+1),
+body .vertical-tab-nav-item.is-active:nth-child(3n+2),
+body .vertical-tab-nav-item.is-active:nth-child(3n+3) {
+  background: hsl(209, 88%, 54%) !important;
+  color: hsl(0, 0%, 100%) !important;
+}
+
+.theme-dark body .vertical-tab-nav-item.is-active,
+.theme-dark body .vertical-tab-nav-item.is-active:nth-child(3n+1),
+.theme-dark body .vertical-tab-nav-item.is-active:nth-child(3n+2),
+.theme-dark body .vertical-tab-nav-item.is-active:nth-child(3n+3) {
+  background: hsl(209, 88%, 58%) !important;
+}
