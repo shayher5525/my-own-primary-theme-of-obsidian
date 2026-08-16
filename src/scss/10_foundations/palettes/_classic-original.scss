@@ -2864,3 +2864,52 @@ body {
   --link-ahref-decoration-color: hsla(5, 94%, 73%, 0.4);
   --link-ahref-decoration-color-hover: hsla(5, 94%, 80%, 0.7);
 }
+
+/* =====================================================================
+ * Primary Mono — 加粗样式固定
+ *
+ * 颜色：浅色模式纯黑、深色模式纯白，取最强对比。
+ * 字体：锁定 阿里巴巴普惠体 3.0 的 105 Heavy 字重。
+ *
+ * 该字族 10 个字重共用家族名「阿里巴巴普惠体 3.0」，只写家族名 +
+ * font-weight: bold 会落到 85 Bold 而非 105 Heavy，因此用 @font-face
+ * 配 local() 按 PostScript 名精确取脸，并声明 font-weight: 100 900
+ * 覆盖全字重区间——这样浏览器认为该脸已满足所请求字重，不会再叠加
+ * 合成加粗（faux bold）把字形糊掉。字体缺失时自动回退到正文字体，
+ * 届时由 font-weight 保证仍呈加粗。
+ * ===================================================================== */
+
+@font-face {
+  font-family: "PM Bold Face";
+  src:
+    local("AlibabaPuHuiTi_3_105_Heavy"),
+    local("阿里巴巴普惠体 3 105 Heavy"),
+    local("AlibabaPuHuiTi-3-105-Heavy"),
+    local("Alibaba PuHuiTi 3.0 Heavy");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.theme-light {
+  --pm-bold-color: hsl(0, 0%, 0%);
+  --bold-color: hsl(0, 0%, 0%);
+}
+
+.theme-dark {
+  --pm-bold-color: hsl(0, 0%, 100%);
+  --bold-color: hsl(0, 0%, 100%);
+}
+
+/* 阅读视图与编辑器的普通加粗。
+ * 不含 strong em / strong mark —— 主题对粗斜体与加粗高亮另有更高
+ * 特异度的规则，保持其原有色彩分工。
+ */
+body .markdown-rendered strong,
+body .markdown-preview-view strong,
+body .cm-s-obsidian span.cm-strong,
+body span.cm-strong {
+  color: var(--pm-bold-color);
+  font-family: "PM Bold Face", var(--font-text);
+  font-weight: 700;
+}

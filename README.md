@@ -12,6 +12,8 @@
 >   高亮按文字样式分五色（普通琥珀 / 粗体朱红 / 斜体青蓝 / 粗斜体黄绿 / 删除线琥珀）；
 >   链接按类型分三色（双链墨蓝 / 外链松石绿 / 裸网址朱红），未解析双链保持灰
 > - accent 强制为中性灰，不再受 Obsidian 设置里取色器影响
+> - **加粗固定为最强对比**：浅色模式纯黑、深色模式纯白；字体锁定
+>   阿里巴巴普惠体 3.0 的 105 Heavy 字重（未装该字体时自动回退到正文字体）
 > - 改动覆盖 `src/scss/10_foundations/palettes/_classic-original.scss`、`src/css/main.css`、
 >   `src/css/main.min.css`、`src/css/style-settings.css`、`Primary.css`、`theme.css`
 >
