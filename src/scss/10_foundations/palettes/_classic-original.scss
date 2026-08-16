@@ -2914,3 +2914,109 @@ body span.cm-strong {
   font-family: "PM Bold Face", var(--font-text);
   font-weight: 700;
 }
+
+/* =====================================================================
+ * Primary Mono — 表头、高亮与选中标签改浅蓝／强调蓝
+ *
+ * 一、表头与高亮改浅蓝：原先高亮按文字样式分五色（琥珀／朱红／青蓝／
+ *     黄绿），现统一为同一支浅蓝。正文链接是橙色，与浅蓝高亮仍能区分。
+ * 二、活动标签页与设置页选中项改用强调蓝（与主题 accent 同色）。
+ *     文字反白，保证在实色块上的对比度。
+ * ===================================================================== */
+
+.theme-light {
+  /* 表头 */
+  --table-header-background: hsla(208, 62%, 92%, 1);
+  --table-header-background-hover: hsla(208, 62%, 88%, 1);
+
+  /* 高亮：五种文字样式统一为浅蓝 */
+  --text-highlight-bg-rgb: 137, 199, 244;
+  --text-highlight-bg: hsla(206, 84%, 75%, 0.45);
+
+  --normal-highlight-bg: hsla(206, 84%, 75%, 0.45);
+  --bold-highlight-bg: hsla(206, 84%, 75%, 0.45);
+  --italic-highlight-bg: hsla(206, 84%, 75%, 0.45);
+  --bold-italic-highlight-bg: hsla(206, 84%, 75%, 0.45);
+  --strikethrough-highlight-bg: hsla(206, 84%, 75%, 0.45);
+
+  /* 活动标签页 */
+  --tab-background-active: hsl(209, 88%, 54%);
+  --tab-outline-color: hsl(209, 88%, 46%);
+  --tab-text-color-active: hsl(0, 0%, 100%);
+  --tab-text-color-focused-active: hsl(0, 0%, 100%);
+  --tab-text-color-focused-active-current: hsl(0, 0%, 100%);
+
+  /* 设置页导航选中项 */
+  --settings-nav-item-bg-active: hsl(209, 88%, 54%);
+  --settings-nav-item-text-color-active: hsl(0, 0%, 100%);
+  --settings-nav-item-active-color: hsl(0, 0%, 100%);
+}
+
+.theme-dark {
+  /* 表头 */
+  --table-header-background: hsla(208, 26%, 22%, 1);
+  --table-header-background-hover: hsla(208, 26%, 26%, 1);
+
+  /* 高亮：五种文字样式统一为浅蓝 */
+  --text-highlight-bg-rgb: 137, 199, 244;
+  --text-highlight-bg: hsla(206, 76%, 56%, 0.35);
+
+  --normal-highlight-bg: hsla(206, 76%, 56%, 0.35);
+  --bold-highlight-bg: hsla(206, 76%, 56%, 0.35);
+  --italic-highlight-bg: hsla(206, 76%, 56%, 0.35);
+  --bold-italic-highlight-bg: hsla(206, 76%, 56%, 0.35);
+  --strikethrough-highlight-bg: hsla(206, 76%, 56%, 0.35);
+
+  /* 活动标签页 */
+  --tab-background-active: hsl(209, 88%, 58%);
+  --tab-outline-color: hsl(209, 88%, 50%);
+  --tab-text-color-active: hsl(0, 0%, 100%);
+  --tab-text-color-focused-active: hsl(0, 0%, 100%);
+  --tab-text-color-focused-active-current: hsl(0, 0%, 100%);
+
+  /* 设置页导航选中项 */
+  --settings-nav-item-bg-active: hsl(209, 88%, 58%);
+  --settings-nav-item-text-color-active: hsl(0, 0%, 100%);
+  --settings-nav-item-active-color: hsl(0, 0%, 100%);
+}
+
+/* 表头单元格本身背景为透明，由主题变量画在容器上；这里直接落到 th，
+ * 确保浅蓝铺满整行而不是只在容器边缘。
+ */
+body .markdown-rendered thead th,
+body .markdown-preview-view thead th,
+body .cm-s-obsidian .HyperMD-table-row-1 {
+  background-color: var(--table-header-background);
+}
+
+/* =====================================================================
+ * Primary Mono — 笔记白底 + 主区活动标签定向上色
+ *
+ * 一、笔记正文底色改纯白。侧边栏、标签栏等界面面保持蓝白，只有正文区
+ *     回到白底，读长文更干净。
+ *
+ * 二、主区活动标签走的是
+ *     `.mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active`
+ *     这条规则，读的是 --tab-active-bg；而该变量侧栏标签也在用，改变量
+ *     会把「笔记本导航器」「笔记属性」等侧栏标签一起染蓝。因此这里写
+ *     定向选择器，只作用于主区。
+ * ===================================================================== */
+
+.theme-light {
+  --background-primary: hsl(0, 0%, 100%);
+  --background-primary-alt: hsl(0, 0%, 100%);
+}
+
+body .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active {
+  background-color: hsl(209, 88%, 54%);
+}
+
+body .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner-title,
+body .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+body .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner-close-button {
+  color: hsl(0, 0%, 100%) !important;
+}
+
+.theme-dark body .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active {
+  background-color: hsl(209, 88%, 58%);
+}
