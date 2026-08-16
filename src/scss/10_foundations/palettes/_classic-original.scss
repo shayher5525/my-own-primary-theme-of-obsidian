@@ -3272,3 +3272,53 @@ body .markdown-preview-view thead th strong,
 body .markdown-preview-view thead th a {
   color: hsl(0, 0%, 100%) !important;
 }
+
+/* 标题色：二级标题取与活动标签同一支强调蓝，一级标题取更深一档的蓝，
+ * 形成层级递进。三级以下保持主题原样。
+ */
+.theme-light {
+  --h1-color: hsl(212, 92%, 32%);
+  --h2-color: hsl(209, 88%, 54%);
+}
+
+.theme-dark {
+  --h1-color: hsl(209, 90%, 72%);
+  --h2-color: hsl(209, 88%, 58%);
+}
+
+/* =====================================================================
+ * Primary Mono — 恢复语义色（错误红 / 成功绿 / 警告黄橙）
+ *
+ * 色相统一时的语义色跳过规则只认 --color-red 这类 Obsidian 核心变量名，
+ * 漏掉了 Primary 的 --color-l-red-30 等带层级命名的色阶，错误红、成功绿、
+ * 警告黄因此全成了蓝灰。
+ *
+ * 这里只恢复语义端点变量，不整条恢复色阶——Primary 把那几条色阶也用在
+ * 语义之外的地方（如 --inline-code-color 取 --color-l-red-10、
+ * --tab-outline-color 取灰阶），整条恢复会让行内代码变红、焦点环变橙。
+ * 直接写字面色值，取自上游对应色阶的原值。
+ * ===================================================================== */
+
+.theme-light {
+  --background-modifier-error: hsla(4, 56%, 48%, 1);
+  --background-modifier-error-hover: hsla(4, 72%, 55%, 1);
+  --background-modifier-success: hsla(149, 50%, 39%, 1);
+  --background-modifier-warning: hsla(18, 69%, 50%, 1);
+  --background-modifier-warning-hover: hsla(21, 81%, 59%, 1);
+
+  --text-error: hsla(4, 56%, 48%, 1);
+  --text-success: hsla(149, 50%, 39%, 1);
+  --text-warning: hsla(18, 69%, 50%, 1);
+}
+
+.theme-dark {
+  --background-modifier-error: hsla(2, 75%, 52%, 1);
+  --background-modifier-error-hover: hsla(4, 88%, 61%, 1);
+  --background-modifier-success: hsla(155, 78%, 29%, 1);
+  --background-modifier-warning: hsla(19, 81%, 41%, 1);
+  --background-modifier-warning-hover: hsla(22, 82%, 47%, 1);
+
+  --text-error: hsla(4, 88%, 61%, 1);
+  --text-success: hsla(155, 78%, 29%, 1);
+  --text-warning: hsla(22, 82%, 47%, 1);
+}
