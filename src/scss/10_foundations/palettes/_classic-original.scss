@@ -3244,3 +3244,31 @@ body .markdown-preview-view thead th,
 body .markdown-preview-view thead tr {
   background-color: var(--table-header-background) !important;
 }
+
+/* 表头改为与活动标签同一支强调蓝，文字反白。
+ * 覆盖前面设的浅蓝，并压过交替列着色，保证整行同色。
+ */
+.theme-light {
+  --table-header-background: hsl(209, 88%, 54%);
+  --table-header-background-hover: hsl(209, 88%, 48%);
+}
+
+.theme-dark {
+  --table-header-background: hsl(209, 88%, 58%);
+  --table-header-background-hover: hsl(209, 88%, 52%);
+}
+
+body .markdown-rendered thead th,
+body .markdown-rendered thead tr,
+body .markdown-preview-view thead th,
+body .markdown-preview-view thead tr {
+  background-color: var(--table-header-background) !important;
+  color: hsl(0, 0%, 100%) !important;
+}
+
+body .markdown-rendered thead th strong,
+body .markdown-rendered thead th a,
+body .markdown-preview-view thead th strong,
+body .markdown-preview-view thead th a {
+  color: hsl(0, 0%, 100%) !important;
+}
