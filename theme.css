@@ -4221,3 +4221,97 @@ body .vertical-tab-nav-item.is-active:nth-child(3n+3) {
 .theme-dark body .vertical-tab-nav-item.is-active:nth-child(3n+3) {
   background: hsl(209, 88%, 58%) !important;
 }
+
+/* =====================================================================
+ * Primary Mono — 强调蓝统一到按钮、开关与导航图标
+ *
+ * --interactive-accent 原为 var(--color-accent-1)，CTA 按钮（如「退出登录」）
+ * 读它；--toggle-bg-enabled 原为 var(--color-l-green-30) 绿色，经色相统一后
+ * 变成深蓝灰，开关打开时看不出「已启用」。两者一并锁到强调蓝。
+ *
+ * 设置页导航选中项的图标是 SVG，不继承父级 color，需单独指定。
+ * ===================================================================== */
+
+.theme-light {
+  --interactive-accent: hsl(209, 88%, 54%);
+  --interactive-accent-hover: hsl(209, 88%, 46%);
+  --interactive-accent-hsl: 209, 88%, 54%;
+  --text-on-accent: hsl(0, 0%, 100%);
+  --toggle-bg-enabled: hsl(209, 88%, 54%);
+  --checkbox-color: hsl(209, 88%, 54%);
+  --checkbox-color-hover: hsl(209, 88%, 46%);
+  --checkbox-marker-color: hsl(0, 0%, 100%);
+}
+
+.theme-dark {
+  --interactive-accent: hsl(209, 88%, 58%);
+  --interactive-accent-hover: hsl(209, 88%, 66%);
+  --interactive-accent-hsl: 209, 88%, 58%;
+  --text-on-accent: hsl(0, 0%, 100%);
+  --toggle-bg-enabled: hsl(209, 88%, 58%);
+  --checkbox-color: hsl(209, 88%, 58%);
+  --checkbox-color-hover: hsl(209, 88%, 66%);
+  --checkbox-marker-color: hsl(0, 0%, 100%);
+}
+
+/* CTA 按钮底色 —— 主题在多个状态下各写了一遍，统一压过 */
+body button:not(button.clickable-icon).mod-cta,
+body button:not(button.clickable-icon).mod-cta:hover,
+body .modal button.mod-cta,
+body .modal button.mod-cta:hover {
+  background: hsl(209, 88%, 54%) !important;
+  color: hsl(0, 0%, 100%) !important;
+}
+
+.theme-dark body button:not(button.clickable-icon).mod-cta,
+.theme-dark body button:not(button.clickable-icon).mod-cta:hover,
+.theme-dark body .modal button.mod-cta,
+.theme-dark body .modal button.mod-cta:hover {
+  background: hsl(209, 88%, 58%) !important;
+}
+
+/* 开关打开态 */
+body .checkbox-container.is-enabled,
+body .checkbox-container.is-enabled:hover {
+  background-color: hsl(209, 88%, 54%) !important;
+}
+
+.theme-dark body .checkbox-container.is-enabled,
+.theme-dark body .checkbox-container.is-enabled:hover {
+  background-color: hsl(209, 88%, 58%) !important;
+}
+
+/* 设置页导航选中项的文字与图标 */
+body .vertical-tab-nav-item.is-active,
+body .vertical-tab-nav-item.is-active .vertical-tab-nav-item-icon,
+body .vertical-tab-nav-item.is-active svg,
+body .vertical-tab-nav-item.is-active .svg-icon {
+  color: hsl(0, 0%, 100%) !important;
+  stroke: currentColor;
+}
+
+/* =====================================================================
+ * Primary Mono — 高亮五色：双蓝 + 红橙黄
+ *
+ * 普通与粗体用深浅两档蓝，其余三式各用一个独立色相，便于一眼分辨：
+ * 斜体红、粗斜体橙、删除线柠檬黄。
+ *
+ * 底色一律取高明度（浅色模式 80~88%），配深色正文字；深色模式取低明度
+ * 配浅字。用不透明色而非半透明，避免叠在不同底色上导致对比度漂移。
+ * ===================================================================== */
+
+.theme-light {
+  --normal-highlight-bg: hsl(204, 82%, 87%);
+  --bold-highlight-bg: hsl(212, 80%, 78%);
+  --italic-highlight-bg: hsl(0, 85%, 88%);
+  --bold-italic-highlight-bg: hsl(28, 95%, 83%);
+  --strikethrough-highlight-bg: hsl(55, 92%, 80%);
+}
+
+.theme-dark {
+  --normal-highlight-bg: hsl(204, 68%, 26%);
+  --bold-highlight-bg: hsl(212, 70%, 34%);
+  --italic-highlight-bg: hsl(0, 52%, 34%);
+  --bold-italic-highlight-bg: hsl(28, 62%, 30%);
+  --strikethrough-highlight-bg: hsl(55, 48%, 26%);
+}
