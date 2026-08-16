@@ -36,6 +36,8 @@
 > - accent 取 Blue Topaz 的 `--simple-blue-1` = `hsla(209, 95%, 62%)`，浅色模式压暗一档
 >   保证文字对比度，不再受 Obsidian 设置里取色器影响
 > - **一级标题深蓝、二级标题强调蓝**，三级以下保持主题原样
+> - **关闭 `ss03` 字符变体**：Primary 在 body 上设了一串为 Inter 调校的 OpenType 特性，
+>   其中 `ss03` 在 MiSans VF 等中文字体里映射到小型大写的 B，文件夹名中的大写 B 会明显偏小
 > - **加粗固定为最强对比**：浅色模式纯黑、深色模式纯白；字体锁定
 >   阿里巴巴普惠体 3.0 的 105 Heavy 字重（未装该字体时自动回退到正文字体）
 > - 改动覆盖 `src/scss/10_foundations/palettes/_classic-original.scss`、`src/css/main.css`、

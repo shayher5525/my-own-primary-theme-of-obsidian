@@ -4439,3 +4439,20 @@ body .markdown-preview-view thead th a {
   --text-success: hsla(155, 78%, 29%, 1);
   --text-warning: hsla(22, 82%, 47%, 1);
 }
+
+/* =====================================================================
+ * Primary Mono — 关闭 ss03 字符变体
+ *
+ * Primary 在 body 上设了一串为 Inter 调校的 OpenType 特性，其中 "ss03"
+ * 在 Inter 里是某个字形变体，但在 MiSans VF 等中文字体里映射到了小型
+ * 大写的 B——文件夹名如 02-01_PartyBuildingTheory、03-04_BrandMarketing
+ * 的大写 B 会明显偏小。实测 40px 下 "BBBB" 宽度 69.8px vs 关闭后 106.9px。
+ *
+ * 其余特性保持原样，只把 ss03 置 0。
+ * ===================================================================== */
+
+body {
+  font-feature-settings:
+    "calt", "case" 0, "ccmp", "ss03" 0, "cv01", "cv05", "cv06",
+    "cv08" 0, "cv11", "cv12" 0, "cv13" 0;
+}
