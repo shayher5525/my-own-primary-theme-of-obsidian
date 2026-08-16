@@ -4062,9 +4062,9 @@ body span.cm-strong {
   /* 活动标签页 */
   --tab-background-active: hsl(209, 88%, 54%);
   --tab-outline-color: hsl(209, 88%, 46%);
-  --tab-text-color-active: hsl(0, 0%, 100%);
-  --tab-text-color-focused-active: hsl(0, 0%, 100%);
-  --tab-text-color-focused-active-current: hsl(0, 0%, 100%);
+  /* 不在此处把标签文字设为白色：该变量对主区与侧栏标签同时生效，
+   * 而侧栏活动标签是浅底，白图标会看不见。主区标签的白字由后面的
+   * .mod-root 定向规则负责。 */
 
   /* 设置页导航选中项 */
   --settings-nav-item-bg-active: hsl(209, 88%, 54%);
@@ -4090,9 +4090,6 @@ body span.cm-strong {
   /* 活动标签页 */
   --tab-background-active: hsl(209, 88%, 58%);
   --tab-outline-color: hsl(209, 88%, 50%);
-  --tab-text-color-active: hsl(0, 0%, 100%);
-  --tab-text-color-focused-active: hsl(0, 0%, 100%);
-  --tab-text-color-focused-active-current: hsl(0, 0%, 100%);
 
   /* 设置页导航选中项 */
   --settings-nav-item-bg-active: hsl(209, 88%, 58%);
