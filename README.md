@@ -1,23 +1,28 @@
 > # ⚠️ 这是修改版：Primary Mono
 >
 > **本仓库不是 Primary 官方版本。** 原作为 [Primary for Obsidian](https://github.com/primary-theme/obsidian) by Cecilia May；
-> 本分支由 Shayher Chen 于 2026-08-16 修改为灰阶（黑白）配色。
+> 本分支由 Shayher Chen 于 2026-08-16 修改为蓝白配色。
 >
 > **修改内容**
 >
-> - 所有 `hsl()` / `hsla()` 的色相与饱和度归零，保留原亮度与 alpha
-> - 所有 `rgb()` / `rgba()` 按 Rec.709 亮度公式转为灰阶，保留 alpha
+> - 所有 `hsl()` / `hsla()` 的色相统一为 210（蓝），饱和度封顶 14%，保留原亮度与 alpha
+> - 所有 `rgb()` / `rgba()` 转 HSL 后同样处理再转回，保留 alpha
+> - 饱和度用**封顶**而非缩放：原本就淡的保持淡，原本浓的压到上限，
+>   于是色调统一、亮度层次不变。深色模式因此自然呈深海军蓝
 > - 错误、警告、成功等**语义色保留原色**（`--color-red` / `--color-orange` / `--color-yellow` / `--color-green`）
-> - **高亮与链接作为功能色保留色相**，否则灰阶下二者无法辨识：
+> - **高亮与链接作为功能色保留色相**，否则会淹没在蓝调界面里：
 >   高亮按文字样式分五色（普通琥珀 / 粗体朱红 / 斜体青蓝 / 粗斜体黄绿 / 删除线琥珀）；
->   链接按类型分三色（双链墨蓝 / 外链松石绿 / 裸网址朱红），未解析双链保持灰
-> - accent 强制为中性灰，不再受 Obsidian 设置里取色器影响
+>   链接按类型分三色（双链橙 / 外链松石绿 / 裸网址朱红），未解析双链保持灰。
+>   双链取橙是因为它是蓝的补色，在蓝调界面上辨识度最高
+> - accent 强制为蓝（色相 210 / 饱和度 32%），不再受 Obsidian 设置里取色器影响
 > - **加粗固定为最强对比**：浅色模式纯黑、深色模式纯白；字体锁定
 >   阿里巴巴普惠体 3.0 的 105 Heavy 字重（未装该字体时自动回退到正文字体）
 > - 改动覆盖 `src/scss/10_foundations/palettes/_classic-original.scss`、`src/css/main.css`、
 >   `src/css/main.min.css`、`src/css/style-settings.css`、`Primary.css`、`theme.css`
 >
-> **复现方式**：转换脚本为 [`tools/desaturate.py`](tools/desaturate.py)，用法 `python3 tools/desaturate.py <输入> <输出> [--accent-override]`。
+> **复现方式**：转换脚本为 [`tools/recolor.py`](tools/recolor.py)，用法
+> `python3 tools/recolor.py <输入> <输出> --hue=210 --max-sat=14 [--accent-override]`。
+> 换 `--hue` 即可改成别的单色调，`--max-sat=0` 则退回纯灰阶。
 >
 > **授权**：与原作相同，依 [GNU GPL v3](./LICENSE) 分发。原作的著作权声明与 Ko-fi 赞助链接均予保留——
 > 如果你喜欢这个主题，请支持[原作者](https://ko-fi.com/ceciliamay)。
