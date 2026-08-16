@@ -5,8 +5,13 @@
 >
 > **修改内容**
 >
-> - 所有 `hsl()` / `hsla()` 的色相统一为 210（蓝），饱和度封顶 14%，保留原亮度与 alpha
-> - 所有 `rgb()` / `rgba()` 转 HSL 后同样处理再转回，保留 alpha
+> - 配色观感参照 [Blue Topaz](https://github.com/PKM-er/Blue-topaz-examples) 的 `--simple-*` 色板：
+>   它的蓝白感来自「越亮的面越蓝」——白是 `hsla(204~212, 45%, 95~97%)` 的冷白，
+>   灰是色相 207~217、饱和度 6~17% 的蓝灰
+> - 所有 `hsl()` / `hsla()` / `rgb()` / `rgba()` 色相统一为 210，饱和度**按亮度分段封顶**
+>   （L≥92 取 42% / L≥80 取 24% / L≥30 取 15% / 更暗取 20%），保留原亮度与 alpha
+> - 中性灰染为同色相的蓝灰；纯白（L≥99）与纯黑（L≤2）不动——给它们染色会让白不再是白，
+>   且阴影遮罩本就该保持中性
 > - 饱和度用**封顶**而非缩放：原本就淡的保持淡，原本浓的压到上限，
 >   于是色调统一、亮度层次不变。深色模式因此自然呈深海军蓝
 > - 错误、警告、成功等**语义色保留原色**（`--color-red` / `--color-orange` / `--color-yellow` / `--color-green`）
@@ -14,15 +19,17 @@
 >   高亮按文字样式分五色（普通琥珀 / 粗体朱红 / 斜体青蓝 / 粗斜体黄绿 / 删除线琥珀）；
 >   链接按类型分三色（双链橙 / 外链松石绿 / 裸网址朱红），未解析双链保持灰。
 >   双链取橙是因为它是蓝的补色，在蓝调界面上辨识度最高
-> - accent 强制为蓝（色相 210 / 饱和度 32%），不再受 Obsidian 设置里取色器影响
+> - accent 取 Blue Topaz 的 `--simple-blue-1` = `hsla(209, 95%, 62%)`，浅色模式压暗一档
+>   保证文字对比度，不再受 Obsidian 设置里取色器影响
 > - **加粗固定为最强对比**：浅色模式纯黑、深色模式纯白；字体锁定
 >   阿里巴巴普惠体 3.0 的 105 Heavy 字重（未装该字体时自动回退到正文字体）
 > - 改动覆盖 `src/scss/10_foundations/palettes/_classic-original.scss`、`src/css/main.css`、
 >   `src/css/main.min.css`、`src/css/style-settings.css`、`Primary.css`、`theme.css`
 >
 > **复现方式**：转换脚本为 [`tools/recolor.py`](tools/recolor.py)，用法
-> `python3 tools/recolor.py <输入> <输出> --hue=210 --max-sat=14 [--accent-override]`。
-> 换 `--hue` 即可改成别的单色调，`--max-sat=0` 则退回纯灰阶。
+> `python3 tools/recolor.py <输入> <输出> --hue=210 --curve=bluetopaz --tint-neutrals [--accent-override]`。
+> 换 `--hue` 即可改成别的单色调；去掉 `--curve` 改用 `--max-sat=N` 是全域封顶（更平、更灰），
+> `--max-sat=0` 且不加 `--curve` / `--tint-neutrals` 则退回纯灰阶。
 >
 > **授权**：与原作相同，依 [GNU GPL v3](./LICENSE) 分发。原作的著作权声明与 Ko-fi 赞助链接均予保留——
 > 如果你喜欢这个主题，请支持[原作者](https://ko-fi.com/ceciliamay)。

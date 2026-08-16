@@ -521,70 +521,70 @@ body {
     color-scheme: light;
 
     /* Grayscale */
-    --color-l-gray-10: hsla(210, 14%, 98%, 1);
-    --color-l-gray-20: hsla(210, 14%, 96%, 1);
-    --color-l-gray-30: hsla(210, 14%, 92%, 1);
-    --color-l-gray-40: hsla(210, 14%, 90%, 1);
-    --color-l-gray-50: hsla(210, 14%, 88%, 1);
-    --color-l-gray-60: hsla(210, 14%, 83%, 1);
-    --color-l-gray-70: hsla(210, 14%, 70%, 1);
-    --color-l-gray-80: hsla(210, 14%, 60%, 1);
-    --color-l-gray-90: hsla(210, 14%, 50%, 1);
-    --color-l-gray-100: hsla(210, 14%, 40%, 1);
-    --color-l-gray-110: hsla(210, 14%, 37%, 1);
-    --color-l-gray-120: hsla(210, 14%, 30%, 1);
-    --color-l-gray-130: hsla(210, 14%, 24%, 1);
-    --color-l-gray-140: hsla(210, 14%, 17%, 1);
+    --color-l-gray-10: hsla(210, 38%, 98%, 1);
+    --color-l-gray-20: hsla(210, 36%, 96%, 1);
+    --color-l-gray-30: hsla(210, 37%, 92%, 1);
+    --color-l-gray-40: hsla(210, 24%, 90%, 1);
+    --color-l-gray-50: hsla(210, 24%, 88%, 1);
+    --color-l-gray-60: hsla(210, 24%, 83%, 1);
+    --color-l-gray-70: hsla(210, 15%, 70%, 1);
+    --color-l-gray-80: hsla(210, 15%, 60%, 1);
+    --color-l-gray-90: hsla(210, 15%, 50%, 1);
+    --color-l-gray-100: hsla(210, 15%, 40%, 1);
+    --color-l-gray-110: hsla(210, 15%, 37%, 1);
+    --color-l-gray-120: hsla(210, 15%, 30%, 1);
+    --color-l-gray-130: hsla(210, 20%, 24%, 1);
+    --color-l-gray-140: hsla(210, 20%, 17%, 1);
 
-    --color-l-alpha-gray: hsla(210, 14%, 70%, 0.15); // gray-80
+    --color-l-alpha-gray: hsla(210, 15%, 70%, 0.15); // gray-80
 
     /* Red */
-    --color-l-red-10: hsla(210, 14%, 64%, 1);
-    --color-l-red-20: hsla(210, 14%, 55%, 1);
-    --color-l-red-30: hsla(210, 14%, 48%, 1);
-    --color-l-red-40: hsla(210, 14%, 35%, 1);
+    --color-l-red-10: hsla(210, 15%, 64%, 1);
+    --color-l-red-20: hsla(210, 15%, 55%, 1);
+    --color-l-red-30: hsla(210, 15%, 48%, 1);
+    --color-l-red-40: hsla(210, 15%, 35%, 1);
 
-    --color-l-alpha-red: hsla(210, 14%, 63%, 0.2);
+    --color-l-alpha-red: hsla(210, 15%, 63%, 0.2);
 
     /* Orange */
-    --color-l-orange-10: hsla(210, 14%, 63%, 1);
-    --color-l-orange-20: hsla(210, 14%, 59%, 1);
-    --color-l-orange-30: hsla(210, 14%, 50%, 1);
-    --color-l-orange-40: hsla(210, 14%, 35%, 1);
+    --color-l-orange-10: hsla(210, 15%, 63%, 1);
+    --color-l-orange-20: hsla(210, 15%, 59%, 1);
+    --color-l-orange-30: hsla(210, 15%, 50%, 1);
+    --color-l-orange-40: hsla(210, 15%, 35%, 1);
 
-    --color-l-alpha-orange: hsla(210, 14%, 50%, 0.2);
+    --color-l-alpha-orange: hsla(210, 15%, 50%, 0.2);
 
     /* Yellow */
-    --color-l-yellow-10: hsla(210, 14%, 67%, 1);
-    --color-l-yellow-20: hsla(210, 14%, 57%, 1);
-    --color-l-yellow-30: hsla(210, 14%, 47%, 1);
-    --color-l-yellow-40: hsla(210, 14%, 36%, 1);
+    --color-l-yellow-10: hsla(210, 15%, 67%, 1);
+    --color-l-yellow-20: hsla(210, 15%, 57%, 1);
+    --color-l-yellow-30: hsla(210, 15%, 47%, 1);
+    --color-l-yellow-40: hsla(210, 15%, 36%, 1);
 
-    --color-l-alpha-yellow: hsla(210, 14%, 50%, 0.2);
+    --color-l-alpha-yellow: hsla(210, 15%, 50%, 0.2);
 
     /* Green */
-    --color-l-green-10: hsla(210, 14%, 65%, 1);
-    --color-l-green-20: hsla(210, 14%, 47%, 1);
-    --color-l-green-30: hsla(210, 14%, 39%, 1);
-    --color-l-green-40: hsla(210, 14%, 29%, 1);
+    --color-l-green-10: hsla(210, 15%, 65%, 1);
+    --color-l-green-20: hsla(210, 15%, 47%, 1);
+    --color-l-green-30: hsla(210, 15%, 39%, 1);
+    --color-l-green-40: hsla(210, 20%, 29%, 1);
 
-    --color-l-alpha-green: hsla(210, 14%, 44%, 0.2);
+    --color-l-alpha-green: hsla(210, 15%, 44%, 0.2);
 
     /* Blue */
-    --color-l-blue-10: hsla(210, 14%, 56%, 1);
-    --color-l-blue-20: hsla(210, 14%, 48%, 1);
-    --color-l-blue-30: hsla(210, 14%, 37%, 1);
-    --color-l-blue-40: hsla(210, 14%, 25%, 1);
+    --color-l-blue-10: hsla(210, 15%, 56%, 1);
+    --color-l-blue-20: hsla(210, 15%, 48%, 1);
+    --color-l-blue-30: hsla(210, 15%, 37%, 1);
+    --color-l-blue-40: hsla(210, 20%, 25%, 1);
 
-    --color-l-alpha-blue: hsla(210, 14%, 46%, 0.2);
+    --color-l-alpha-blue: hsla(210, 15%, 46%, 0.2);
 
     /* Purple */
-    --color-l-purple-10: hsla(210, 14%, 76%, 1);
-    --color-l-purple-20: hsla(210, 14%, 59%, 1);
-    --color-l-purple-30: hsla(210, 14%, 43%, 1);
-    --color-l-purple-40: hsla(210, 14%, 30%, 1);
+    --color-l-purple-10: hsla(210, 15%, 76%, 1);
+    --color-l-purple-20: hsla(210, 15%, 59%, 1);
+    --color-l-purple-30: hsla(210, 15%, 43%, 1);
+    --color-l-purple-40: hsla(210, 15%, 30%, 1);
 
-    --color-l-alpha-purple: hsla(210, 14%, 72%, 0.2);
+    --color-l-alpha-purple: hsla(210, 15%, 72%, 0.2);
     
     /*────────── Foundations ──────────*/
 
@@ -659,16 +659,16 @@ body {
     --color-green: hsla(146, 37%, 49%, 1);
 
     --color-cyan-rgb: 124, 180, 206;
-    --color-cyan: hsla(210, 14%, 49%, 1);
+    --color-cyan: hsla(210, 15%, 49%, 1);
 
     --color-blue-rgb: 99, 164, 198;
-    --color-blue: hsla(210, 14%, 44%, 1);
+    --color-blue: hsla(210, 15%, 44%, 1);
 
     --color-purple-rgb: 135, 106, 193;
-    --color-purple: hsla(210, 14%, 60%, 1);
+    --color-purple: hsla(210, 15%, 60%, 1);
 
     --color-pink-rgb: 217, 102, 122;
-    --color-pink: hsla(210, 14%, 61%, 1);
+    --color-pink: hsla(210, 15%, 61%, 1);
 
     /* Shadow */
     --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.028),
@@ -693,7 +693,7 @@ body {
     --background-modifier-border-focus: color-mix(in hsl, var(--color-l-gray-70) 60%, var(--color-l-gray-60));
 
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
-    --background-modifier-cover: rgba(220, 220, 220, 0.4);
+    --background-modifier-cover: rgba(217, 220, 224, 0.4);
 
     --background-modifier-warning: var(--color-l-orange-30);
     --background-modifier-warning-hover: var(--color-l-orange-20);
@@ -858,40 +858,40 @@ body {
     --checklist-done-color: var(--color-l-gray-80);
 
     /* Alt Checkboxes */
-    --inprogress-chbx-color: hsla(210, 14%, 57%, 1);
-    --inprogress-chbx-color-hover: hsla(210, 14%, 64%, 1);
+    --inprogress-chbx-color: hsla(210, 15%, 57%, 1);
+    --inprogress-chbx-color-hover: hsla(210, 15%, 64%, 1);
     --inprogress-chbx-border-color: color-mix(in srgb, var(--inprogress-chbx-color) 65%, var(--color-base-60));
-    --resched-chbx-color: hsla(210, 14%, 59%, 1);
+    --resched-chbx-color: hsla(210, 15%, 59%, 1);
     --sched-chbx-color: hsla(210, 10%, 68%, 1);
-    --important-chbx-color: hsla(210, 14%, 52%, 1);
+    --important-chbx-color: hsla(210, 15%, 52%, 1);
     --important-chbx-icon-color: white;
     --important-chbx-radius: 100%;
     --cancelled-chbx-color: hsla(210, 10%, 68%, 1);
     --cancelled-chbx-text-color: var(--text-faint);
     --cancelled-chbx-text-decoration: line-through;
-    --question-chbx-color: hsla(210, 14%, 54%, 1);
+    --question-chbx-color: hsla(210, 15%, 54%, 1);
     --question-chbx-icon-color: white;
-    --star-chbx-color: hsla(210, 14%, 51%, 1);
+    --star-chbx-color: hsla(210, 15%, 51%, 1);
     --star-chbx-icon-color: white;
-    --note-chbx-color: hsla(210, 14%, 53%, 1);
-    --location-chbox-color: hsla(210, 14%, 48%, 1);
-    --info-chbx-color: hsla(210, 14%, 45%, 1);
+    --note-chbx-color: hsla(210, 15%, 53%, 1);
+    --location-chbox-color: hsla(210, 15%, 48%, 1);
+    --info-chbx-color: hsla(210, 15%, 45%, 1);
     --info-chbx-icon-color: white;
-    --amount-chbx-color: hsla(210, 14%, 41%, 1);
+    --amount-chbx-color: hsla(210, 15%, 41%, 1);
     --amount-chbx-icon-color: white;
     --amount-chbx-radius: 100%;
-    --quote-chbx-color: hsla(210, 14%, 48%, 1);
+    --quote-chbx-color: hsla(210, 15%, 48%, 1);
     --quote-chbx-icon-color: white;
-    --idea-chbx-color: hsla(210, 14%, 62%, 1);
-    --pro-chbx-color: hsla(210, 14%, 44%, 1);
-    --con-chbx-color: hsla(210, 14%, 45%, 1);
-    --bookmark-chbx-color: hsla(210, 14%, 59%, 1);
-    --up-chbx-color: hsla(210, 14%, 49%, 1);
-    --down-chbx-color: hsla(210, 14%, 48%, 1);
-    --law-chbx-color: hsla(210, 14%, 52%, 1);
-    --language-chbx-color: hsla(210, 14%, 64%, 1);
-    --clock-chbx-color: hsla(210, 14%, 49%, 1);
-    --telephone-chbx-color: hsla(210, 14%, 47%, 1);
+    --idea-chbx-color: hsla(210, 15%, 62%, 1);
+    --pro-chbx-color: hsla(210, 15%, 44%, 1);
+    --con-chbx-color: hsla(210, 15%, 45%, 1);
+    --bookmark-chbx-color: hsla(210, 15%, 59%, 1);
+    --up-chbx-color: hsla(210, 15%, 49%, 1);
+    --down-chbx-color: hsla(210, 15%, 48%, 1);
+    --law-chbx-color: hsla(210, 15%, 52%, 1);
+    --language-chbx-color: hsla(210, 15%, 64%, 1);
+    --clock-chbx-color: hsla(210, 15%, 49%, 1);
+    --telephone-chbx-color: hsla(210, 15%, 47%, 1);
 
     /* Drag Ghost */
     --drag-ghost-background: var(--interactive-accent);
@@ -935,8 +935,8 @@ body {
     --nav-item-color-highlighted: var(--text-accent-hover);
     --nav-item-background-hover: rgba(255, 255, 255, 0.25);
     --nav-item-background-active: rgba(255, 255, 255, 0.25);
-    --nav-item-background-selected: hsla(210, 14%, 27%, 0.5);
-    --nav-item-background-selected-hover: hsla(210, 14%, 27%, 0.4);
+    --nav-item-background-selected: hsla(210, 20%, 27%, 0.5);
+    --nav-item-background-selected-hover: hsla(210, 20%, 27%, 0.4);
     --nav-indentation-guide-color: var(--indentation-guide-color);
     --nav-collapse-icon-color: var(--collapse-icon-color);
     --nav-collapse-icon-color-collapsed: var(--text-faint);
@@ -1139,7 +1139,7 @@ body {
     --callout-title-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.05),
                             inset 0px 1px 1px 0px rgba(255, 255, 255, 0.2);
     --callout-content-shadow:   inset 0px 0px 0px 1px rgba(0, 0, 0, 0.08),
-                                inset 0px calc(-1 * var(--callout-shadow-offset)) var(--callout-content-shadow-blur) 0px rgba(100, 100, 100, 0.13);
+                                inset 0px calc(-1 * var(--callout-shadow-offset)) var(--callout-content-shadow-blur) 0px rgba(90, 100, 110, 0.13);
 
     /* Embed */
     --embed-background: var(--embed-bg-color-mix);
@@ -1647,70 +1647,70 @@ body {
     color-scheme: dark;
 
     /* Grayscale */
-    --color-d-gray-10: hsla(210, 14%, 85%, 1);
-    --color-d-gray-20: hsla(210, 14%, 74%, 1);
-    --color-d-gray-30: hsla(210, 14%, 68%, 1);
-    --color-d-gray-40: hsla(210, 14%, 55%, 1);
-    --color-d-gray-50: hsla(210, 14%, 46%, 1);
-    --color-d-gray-60: hsla(210, 14%, 33%, 1);
-    --color-d-gray-70: hsla(210, 14%, 25%, 1);
-    --color-d-gray-80: hsla(210, 14%, 19%, 1);
-    --color-d-gray-90: hsla(210, 14%, 17%, 1);
-    --color-d-gray-100: hsla(210, 14%, 15%, 1);
-    --color-d-gray-110: hsla(210, 14%, 14%, 1);
-    --color-d-gray-120: hsla(210, 14%, 13%, 1);
-    --color-d-gray-130: hsla(210, 14%, 11%, 1);
-    --color-d-gray-140: hsla(210, 14%, 9%, 1);
+    --color-d-gray-10: hsla(210, 24%, 85%, 1);
+    --color-d-gray-20: hsla(210, 15%, 74%, 1);
+    --color-d-gray-30: hsla(210, 15%, 68%, 1);
+    --color-d-gray-40: hsla(210, 15%, 55%, 1);
+    --color-d-gray-50: hsla(210, 15%, 46%, 1);
+    --color-d-gray-60: hsla(210, 15%, 33%, 1);
+    --color-d-gray-70: hsla(210, 20%, 25%, 1);
+    --color-d-gray-80: hsla(210, 20%, 19%, 1);
+    --color-d-gray-90: hsla(210, 20%, 17%, 1);
+    --color-d-gray-100: hsla(210, 19%, 15%, 1);
+    --color-d-gray-110: hsla(210, 17%, 14%, 1);
+    --color-d-gray-120: hsla(210, 16%, 13%, 1);
+    --color-d-gray-130: hsla(210, 18%, 11%, 1);
+    --color-d-gray-140: hsla(210, 20%, 9%, 1);
 
-    --color-d-alpha-gray: hsla(210, 14%, 40%, 0.2);
+    --color-d-alpha-gray: hsla(210, 15%, 40%, 0.2);
 
     /* Red */
-    --color-d-red-10: hsla(210, 14%, 73%, 1);
-    --color-d-red-20: hsla(210, 14%, 67%, 1);
-    --color-d-red-30: hsla(210, 14%, 61%, 1);
-    --color-d-red-40: hsla(210, 14%, 52%, 1);
+    --color-d-red-10: hsla(210, 15%, 73%, 1);
+    --color-d-red-20: hsla(210, 15%, 67%, 1);
+    --color-d-red-30: hsla(210, 15%, 61%, 1);
+    --color-d-red-40: hsla(210, 15%, 52%, 1);
 
-    --color-d-alpha-red: hsla(210, 14%, 63%, 0.2);
+    --color-d-alpha-red: hsla(210, 15%, 63%, 0.2);
 
     /* Orange */
-    --color-d-orange-10: hsla(210, 14%, 58%, 1);
-    --color-d-orange-20: hsla(210, 14%, 50%, 1);
-    --color-d-orange-30: hsla(210, 14%, 47%, 1);
-    --color-d-orange-40: hsla(210, 14%, 41%, 1);
+    --color-d-orange-10: hsla(210, 15%, 58%, 1);
+    --color-d-orange-20: hsla(210, 15%, 50%, 1);
+    --color-d-orange-30: hsla(210, 15%, 47%, 1);
+    --color-d-orange-40: hsla(210, 15%, 41%, 1);
 
-    --color-d-alpha-orange: hsla(210, 14%, 50%, 0.2);
+    --color-d-alpha-orange: hsla(210, 15%, 50%, 0.2);
 
     /* Yellow */
-    --color-d-yellow-10: hsla(210, 14%, 63%, 1);
-    --color-d-yellow-20: hsla(210, 14%, 51%, 1);
-    --color-d-yellow-30: hsla(210, 14%, 48%, 1);
-    --color-d-yellow-40: hsla(210, 14%, 42%, 1);
+    --color-d-yellow-10: hsla(210, 15%, 63%, 1);
+    --color-d-yellow-20: hsla(210, 15%, 51%, 1);
+    --color-d-yellow-30: hsla(210, 15%, 48%, 1);
+    --color-d-yellow-40: hsla(210, 15%, 42%, 1);
 
-    --color-d-alpha-yellow: hsla(210, 14%, 50%, 0.2);
+    --color-d-alpha-yellow: hsla(210, 15%, 50%, 0.2);
 
     /* Green */
-    --color-d-green-10: hsla(210, 14%, 54%, 1);
-    --color-d-green-20: hsla(210, 14%, 42%, 1);
-    --color-d-green-30: hsla(210, 14%, 29%, 1);
-    --color-d-green-40: hsla(210, 14%, 26%, 1);
+    --color-d-green-10: hsla(210, 15%, 54%, 1);
+    --color-d-green-20: hsla(210, 15%, 42%, 1);
+    --color-d-green-30: hsla(210, 20%, 29%, 1);
+    --color-d-green-40: hsla(210, 20%, 26%, 1);
 
-    --color-d-alpha-green: hsla(210, 14%, 44%, 0.2);
+    --color-d-alpha-green: hsla(210, 15%, 44%, 0.2);
 
     /* Blue */
-    --color-d-blue-10: hsla(210, 14%, 62%, 1);
-    --color-d-blue-20: hsla(210, 14%, 56%, 1);
-    --color-d-blue-30: hsla(210, 14%, 49%, 1);
-    --color-d-blue-40: hsla(210, 14%, 40%, 1);
+    --color-d-blue-10: hsla(210, 15%, 62%, 1);
+    --color-d-blue-20: hsla(210, 15%, 56%, 1);
+    --color-d-blue-30: hsla(210, 15%, 49%, 1);
+    --color-d-blue-40: hsla(210, 15%, 40%, 1);
 
-    --color-d-alpha-blue: hsla(210, 14%, 46%, 0.2);
+    --color-d-alpha-blue: hsla(210, 15%, 46%, 0.2);
 
     /* Purple */
-    --color-d-purple-10: hsla(210, 14%, 69%, 1);
-    --color-d-purple-20: hsla(210, 14%, 57%, 1);
-    --color-d-purple-30: hsla(210, 14%, 51%, 1);
-    --color-d-purple-40: hsla(210, 14%, 48%, 1);
+    --color-d-purple-10: hsla(210, 15%, 69%, 1);
+    --color-d-purple-20: hsla(210, 15%, 57%, 1);
+    --color-d-purple-30: hsla(210, 15%, 51%, 1);
+    --color-d-purple-40: hsla(210, 15%, 48%, 1);
 
-    --color-d-alpha-purple: hsla(210, 14%, 72%, 0.2);
+    --color-d-alpha-purple: hsla(210, 15%, 72%, 0.2);
 
     /*────────── Foundations ──────────*/
 
@@ -1775,16 +1775,16 @@ body {
     --color-green: rgb(80, 196, 101);
 
     --color-cyan-rgb: 91, 175, 183;
-    --color-cyan: rgb(107, 125, 143);
+    --color-cyan: rgb(106, 125, 144);
 
     --color-blue-rgb: 99, 156, 192;
-    --color-blue: rgb(103, 119, 136);
+    --color-blue: rgb(102, 119, 137);
 
     --color-purple-rgb: 139, 113, 185;
-    --color-purple: rgb(130, 146, 161);
+    --color-purple: rgb(129, 146, 162);
 
     --color-pink-rgb: 224, 108, 138;
-    --color-pink: rgb(124, 140, 156);
+    --color-pink: rgb(123, 140, 157);
 
     /* Special Colors */
     --non-alternating-color: var(--color-d-gray-60);
@@ -1819,7 +1819,7 @@ body {
     --background-modifier-border-focus: color-mix(in srgb, var(--color-d-gray-70) 40%, var(--color-d-gray-80));
 
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
-    --background-modifier-cover: rgba(10, 10, 10, 0.4);
+    --background-modifier-cover: rgba(9, 10, 11, 0.4);
 
     --background-modifier-warning: var(--color-d-orange-40);
     --background-modifier-warning-hover: var(--color-d-orange-30);
@@ -1986,40 +1986,40 @@ body {
     --checklist-done-color: var(--color-d-gray-50);
 
     /* Alt Checkboxes */
-    --inprogress-chbx-color: hsla(210, 14%, 59%, 1);
-    --inprogress-chbx-color-hover: hsla(210, 14%, 65%, 1);
+    --inprogress-chbx-color: hsla(210, 15%, 59%, 1);
+    --inprogress-chbx-color-hover: hsla(210, 15%, 65%, 1);
     --inprogress-chbx-border-color: color-mix(in srgb, var(--inprogress-chbx-color) 15%, var(--color-base-60));
-    --resched-chbx-color: hsla(210, 14%, 55%, 1);
+    --resched-chbx-color: hsla(210, 15%, 55%, 1);
     --sched-chbx-color: hsla(210, 10%, 58%, 1);
-    --important-chbx-color: hsl(210, 14%, 47%);
+    --important-chbx-color: hsl(210, 15%, 47%);
     --important-chbx-icon-color: white;
     --important-chbx-radius: 100%;
     --cancelled-chbx-color: hsla(210, 10%, 58%, 1);
     --cancelled-chbx-text-color: var(--text-faint);
     --cancelled-chbx-text-decoration: line-through;
-    --question-chbx-color: hsla(210, 14%, 54%, 1);
+    --question-chbx-color: hsla(210, 15%, 54%, 1);
     --question-chbx-icon-color: white;
-    --star-chbx-color: hsla(210, 14%, 46%, 1);
+    --star-chbx-color: hsla(210, 15%, 46%, 1);
     --star-chbx-icon-color: white;
-    --note-chbx-color: hsla(210, 14%, 53%, 1);
-    --location-chbox-color: hsla(210, 14%, 48%, 1);
-    --info-chbx-color: hsla(210, 14%, 41%, 1);
+    --note-chbx-color: hsla(210, 15%, 53%, 1);
+    --location-chbox-color: hsla(210, 15%, 48%, 1);
+    --info-chbx-color: hsla(210, 15%, 41%, 1);
     --info-chbx-icon-color: white;
-    --amount-chbx-color: hsla(210, 14%, 38%, 1);
+    --amount-chbx-color: hsla(210, 15%, 38%, 1);
     --amount-chbx-icon-color: white;
     --amount-chbx-radius: 100%;
-    --quote-chbx-color: hsla(210, 14%, 48%, 1);
+    --quote-chbx-color: hsla(210, 15%, 48%, 1);
     --quote-chbx-icon-color: white;
-    --idea-chbx-color: hsla(210, 14%, 62%, 1);
-    --pro-chbx-color: hsla(210, 14%, 47%, 1);
-    --con-chbx-color: hsla(210, 14%, 47%, 1);
-    --bookmark-chbx-color: hsla(210, 14%, 54%, 1);
-    --up-chbx-color: hsla(210, 14%, 51%, 1);
-    --down-chbx-color: hsla(210, 14%, 54%, 1);
-    --law-chbx-color: hsla(210, 14%, 52%, 1);
-    --language-chbx-color: hsla(210, 14%, 62%, 1);
-    --clock-chbx-color: hsla(210, 14%, 52%, 1);
-    --telephone-chbx-color: hsla(210, 14%, 42%, 1);
+    --idea-chbx-color: hsla(210, 15%, 62%, 1);
+    --pro-chbx-color: hsla(210, 15%, 47%, 1);
+    --con-chbx-color: hsla(210, 15%, 47%, 1);
+    --bookmark-chbx-color: hsla(210, 15%, 54%, 1);
+    --up-chbx-color: hsla(210, 15%, 51%, 1);
+    --down-chbx-color: hsla(210, 15%, 54%, 1);
+    --law-chbx-color: hsla(210, 15%, 52%, 1);
+    --language-chbx-color: hsla(210, 15%, 62%, 1);
+    --clock-chbx-color: hsla(210, 15%, 52%, 1);
+    --telephone-chbx-color: hsla(210, 15%, 42%, 1);
 
     /* Drag Ghost */
     --drag-ghost-background: var(--interactive-accent);
@@ -2065,8 +2065,8 @@ body {
     --nav-item-color-highlighted: var(--text-accent-hover);
     --nav-item-background-hover: rgba(0, 0, 0, 0.125);
     --nav-item-background-active: rgba(0, 0, 0, 0.125);
-    --nav-item-background-selected: hsla(210, 14%, 29%, 0.5);
-    --nav-item-background-selected-hover: hsla(210, 14%, 29%, 0.4);
+    --nav-item-background-selected: hsla(210, 20%, 29%, 0.5);
+    --nav-item-background-selected-hover: hsla(210, 20%, 29%, 0.4);
     --nav-indentation-guide-color: var(--indentation-guide-color);
     --nav-collapse-icon-color: var(--collapse-icon-color);
     --nav-collapse-icon-color-collapsed: var(--text-faint);
@@ -2637,7 +2637,7 @@ body {
         --tag-background: rgba(0, 0, 0, 0.3);
         --search-result-background: var(--background-primary-alt);
         --background-modifier-form-field: var(--color-d-gray-130);
-        --background-modifier-cover: rgba(10, 10, 10, 0.4);
+        --background-modifier-cover: rgba(9, 10, 11, 0.4);
         --background-modifier-hover: rgba(0, 0, 0, 0.3);
         --settings-home-background: var(--background-primary);
 
