@@ -1,4 +1,4 @@
-> # ⚠️ 这是修改版：Primary Mono
+> # ⚠️ 这是修改版：Primary Blue
 >
 > **本仓库不是 Primary 官方版本。** 原作为 [Primary for Obsidian](https://github.com/primary-theme/obsidian) by Cecilia May；
 > 本分支由 Shayher Chen 于 2026-08-16 修改为蓝白配色。

@@ -2793,7 +2793,7 @@ body {
     --pcr-btn-shadow: inset 0px 0px 0px 1.5px rgba(255, 255, 255, 0.2);
 }
 /* =====================================================================
- * Primary Mono — 功能色回填
+ * Primary Blue — 功能色回填
  *
  * 整体配色统一到蓝调后，高亮与链接若跟着走蓝就会淹没在界面里。
  * 这两类属于功能色，和 error/warning/success 同理，须保留自己的色相。
@@ -2867,7 +2867,7 @@ body {
 }
 
 /* =====================================================================
- * Primary Mono — 加粗样式固定
+ * Primary Blue — 加粗样式固定
  *
  * 颜色：浅色模式纯黑、深色模式纯白，取最强对比。
  * 字体：锁定 阿里巴巴普惠体 3.0 的 105 Heavy 字重。
@@ -2916,7 +2916,7 @@ body span.cm-strong {
 }
 
 /* =====================================================================
- * Primary Mono — 表头、高亮与选中标签改浅蓝／强调蓝
+ * Primary Blue — 表头、高亮与选中标签改浅蓝／强调蓝
  *
  * 一、表头与高亮改浅蓝：原先高亮按文字样式分五色（琥珀／朱红／青蓝／
  *     黄绿），现统一为同一支浅蓝。正文链接是橙色，与浅蓝高亮仍能区分。
@@ -2987,7 +2987,7 @@ body .cm-s-obsidian .HyperMD-table-row-1 {
 }
 
 /* =====================================================================
- * Primary Mono — 笔记白底 + 主区活动标签定向上色
+ * Primary Blue — 笔记白底 + 主区活动标签定向上色
  *
  * 一、笔记正文底色改纯白。侧边栏、标签栏等界面面保持蓝白，只有正文区
  *     回到白底，读长文更干净。
@@ -3019,7 +3019,7 @@ body .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active
 }
 
 /* =====================================================================
- * Primary Mono — 设置页选中项上色 + 高亮五档蓝
+ * Primary Blue — 设置页选中项上色 + 高亮五档蓝
  *
  * 一、设置页选中项：Primary 用 `.is-active:nth-child(3n+1|2|3)` 三条规则
  *     按位置轮换 --alternating-color-1/2/3 作背景，根本不读
@@ -3100,7 +3100,7 @@ body .vertical-tab-nav-item.is-active:nth-child(3n+3) {
 }
 
 /* =====================================================================
- * Primary Mono — 强调蓝统一到按钮、开关与导航图标
+ * Primary Blue — 强调蓝统一到按钮、开关与导航图标
  *
  * --interactive-accent 原为 var(--color-accent-1)，CTA 按钮（如「退出登录」）
  * 读它；--toggle-bg-enabled 原为 var(--color-l-green-30) 绿色，经色相统一后
@@ -3168,7 +3168,7 @@ body .vertical-tab-nav-item.is-active .svg-icon {
 }
 
 /* =====================================================================
- * Primary Mono — 高亮五色：双蓝 + 红橙黄
+ * Primary Blue — 高亮五色：双蓝 + 红橙黄
  *
  * 普通与粗体用深浅两档蓝，其余三式各用一个独立色相，便于一眼分辨：
  * 斜体红、粗斜体橙、删除线柠檬黄。
@@ -3194,7 +3194,7 @@ body .vertical-tab-nav-item.is-active .svg-icon {
 }
 
 /* =====================================================================
- * Primary Mono — mod-warning 按钮改蓝 + 表格正文白底
+ * Primary Blue — mod-warning 按钮改蓝 + 表格正文白底
  *
  * 「退出登录」是 button.mod-warning，读 --background-modifier-error，
  * 该变量指向 --color-l-red-30。按用户要求统一为强调蓝，只作用于按钮，
@@ -3284,7 +3284,7 @@ body .markdown-preview-view thead th a {
 }
 
 /* =====================================================================
- * Primary Mono — 恢复语义色（错误红 / 成功绿 / 警告黄橙）
+ * Primary Blue — 恢复语义色（错误红 / 成功绿 / 警告黄橙）
  *
  * 色相统一时的语义色跳过规则只认 --color-red 这类 Obsidian 核心变量名，
  * 漏掉了 Primary 的 --color-l-red-30 等带层级命名的色阶，错误红、成功绿、
@@ -3321,7 +3321,7 @@ body .markdown-preview-view thead th a {
 }
 
 /* =====================================================================
- * Primary Mono — 关闭 ss03 字符变体
+ * Primary Blue — 关闭 ss03 字符变体
  *
  * Primary 在 body 上设了一串为 Inter 调校的 OpenType 特性，其中 "ss03"
  * 在 Inter 里是某个字形变体，但在 MiSans VF 等中文字体里映射到了小型
