@@ -3896,16 +3896,19 @@ settings:
 
 /* ===== Primary Mono: accent 覆盖 =====
  * 取 Blue Topaz 的 --simple-blue-1 = hsla(209, 95%, 62%) 作强调色，
- * 不受设置面板取色器影响。浅色模式压暗一档以保证文字对比度。
+ * 浅色模式压暗一档以保证文字对比度。
+ *
+ * 必须带 !important：Obsidian 把用户选的 accent 写成 body 的内联样式，
+ * 内联优先级高于样式表，不加 !important 这里会被静默覆盖。
  */
 body {
-  --accent-h: 209;
-  --accent-s: 88%;
-  --accent-l: 54%;
+  --accent-h: 209 !important;
+  --accent-s: 88% !important;
+  --accent-l: 54% !important;
 }
 
 .theme-dark {
-  --accent-l: 62%;
+  --accent-l: 62% !important;
 }
 
 /* =====================================================================
