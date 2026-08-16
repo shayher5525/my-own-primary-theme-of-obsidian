@@ -1,3 +1,26 @@
+> # ⚠️ 这是修改版：Primary Mono
+>
+> **本仓库不是 Primary 官方版本。** 原作为 [Primary for Obsidian](https://github.com/primary-theme/obsidian) by Cecilia May；
+> 本分支由 Shayher Chen 于 2026-08-16 修改为灰阶（黑白）配色。
+>
+> **修改内容**
+>
+> - 所有 `hsl()` / `hsla()` 的色相与饱和度归零，保留原亮度与 alpha
+> - 所有 `rgb()` / `rgba()` 按 Rec.709 亮度公式转为灰阶，保留 alpha
+> - 错误、警告、成功等**语义色保留原色**（`--color-red` / `--color-orange` / `--color-yellow` / `--color-green`）
+> - accent 强制为中性灰，不再受 Obsidian 设置里取色器影响
+> - 改动覆盖 `src/scss/10_foundations/palettes/_classic-original.scss`、`src/css/main.css`、
+>   `src/css/main.min.css`、`src/css/style-settings.css`、`Primary.css`、`theme.css`
+>
+> **复现方式**：转换脚本为 [`tools/desaturate.py`](tools/desaturate.py)，用法 `python3 tools/desaturate.py <输入> <输出> [--accent-override]`。
+>
+> **授权**：与原作相同，依 [GNU GPL v3](./LICENSE) 分发。原作的著作权声明与 Ko-fi 赞助链接均予保留——
+> 如果你喜欢这个主题，请支持[原作者](https://ko-fi.com/ceciliamay)。
+>
+> 以下为原版 README，内容未改，其中的徽章、截图与链接均指向上游仓库。
+
+---
+
 ![Primary for Obsidian Overview](https://github.com/primary-theme/obsidian/blob/main/assets/obsidian-overview-header.png)
 <h1 align="center">Primary for <a href="https://obsidian.md">Obsidian</a></h1>
 <p align="center">

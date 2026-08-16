@@ -1,8 +1,9 @@
 {
-  "name": "Primary",
-  "version": "2.10.0",
+  "name": "Primary Mono",
+  "version": "2.10.0-mono.1",
   "minAppVersion": "1.4.0",
-  "author": "Cecilia May",
+  "author": "Cecilia May (原作) · Shayher Chen (灰阶改色)",
+  "authorUrl": "https://github.com/shayher5525/my-own-primary-theme-of-obsidian",
   "fundingUrl": {
     "Ko-fi": "https://ko-fi.com/ceciliamay"
   }
