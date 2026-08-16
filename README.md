@@ -8,6 +8,9 @@
 > - 所有 `hsl()` / `hsla()` 的色相与饱和度归零，保留原亮度与 alpha
 > - 所有 `rgb()` / `rgba()` 按 Rec.709 亮度公式转为灰阶，保留 alpha
 > - 错误、警告、成功等**语义色保留原色**（`--color-red` / `--color-orange` / `--color-yellow` / `--color-green`）
+> - **高亮与链接作为功能色保留色相**，否则灰阶下二者无法辨识：
+>   高亮按文字样式分五色（普通琥珀 / 粗体朱红 / 斜体青蓝 / 粗斜体黄绿 / 删除线琥珀）；
+>   链接按类型分三色（双链墨蓝 / 外链松石绿 / 裸网址朱红），未解析双链保持灰
 > - accent 强制为中性灰，不再受 Obsidian 设置里取色器影响
 > - 改动覆盖 `src/scss/10_foundations/palettes/_classic-original.scss`、`src/css/main.css`、
 >   `src/css/main.min.css`、`src/css/style-settings.css`、`Primary.css`、`theme.css`

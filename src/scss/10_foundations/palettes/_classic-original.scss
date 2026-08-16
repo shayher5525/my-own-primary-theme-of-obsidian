@@ -2792,3 +2792,75 @@ body {
     --style-settings-container-bg: color-mix(in srgb, var(--background-primary-alt) 50%, transparent);
     --pcr-btn-shadow: inset 0px 0px 0px 1.5px rgba(255, 255, 255, 0.2);
 }
+/* =====================================================================
+ * Primary Mono — 功能色回填（方案 E）
+ *
+ * 灰阶转换会把高亮底色和链接色一并吃掉，导致二者在正文里无法辨识。
+ * 这两类属于功能色，和 error/warning/success 同理，须保留色相。
+ *
+ * 这里直接写字面色值，不改 --color-l-* / --color-d-* 共用色阶，
+ * 因此影响面仅限高亮与链接，界面其余部分保持灰阶。
+ *
+ * 高亮：五套文字样式各用一个色相，沿用原版 Primary 的分工
+ * 链接：双链墨蓝、外链松石绿、裸网址朱红、未解析保持灰
+ * ===================================================================== */
+
+.theme-light {
+  /* 高亮 */
+  --text-highlight-bg-rgb: 255, 187, 0;
+  --text-highlight-bg: hsla(44, 100%, 50%, 0.2);
+
+  --normal-highlight-bg: hsla(44, 100%, 50%, 0.2);
+  --bold-highlight-bg: hsla(350, 84%, 63%, 0.2);
+  --italic-highlight-bg: hsla(186, 64%, 46%, 0.2);
+  --bold-italic-highlight-bg: hsla(74, 69%, 44%, 0.2);
+  --strikethrough-highlight-bg: hsla(44, 100%, 50%, 0.2);
+
+  /* 链接：双链 */
+  --link-color: hsla(210, 62%, 43%, 1);
+  --link-color-hover: hsla(210, 62%, 34%, 1);
+  --link-decoration-color: hsla(210, 62%, 43%, 0.4);
+  --link-decoration-color-hover: hsla(210, 62%, 34%, 0.7);
+
+  /* 链接：外链 */
+  --link-external-color: hsla(149, 50%, 39%, 1);
+  --link-external-color-hover: hsla(149, 50%, 30%, 1);
+  --link-external-decoration-color: hsla(149, 50%, 39%, 0.4);
+  --link-external-decoration-color-hover: hsla(149, 50%, 30%, 0.7);
+
+  /* 链接：正文裸网址 */
+  --link-ahref-color: hsla(4, 56%, 48%, 1);
+  --link-ahref-color-hover: hsla(4, 56%, 39%, 1);
+  --link-ahref-decoration-color: hsla(4, 56%, 48%, 0.4);
+  --link-ahref-decoration-color-hover: hsla(4, 56%, 39%, 0.7);
+}
+
+.theme-dark {
+  /* 高亮 */
+  --text-highlight-bg-rgb: 255, 187, 0;
+  --text-highlight-bg: hsla(44, 100%, 50%, 0.2);
+
+  --normal-highlight-bg: hsla(44, 100%, 50%, 0.2);
+  --bold-highlight-bg: hsla(350, 84%, 63%, 0.2);
+  --italic-highlight-bg: hsla(186, 64%, 46%, 0.2);
+  --bold-italic-highlight-bg: hsla(74, 69%, 44%, 0.2);
+  --strikethrough-highlight-bg: hsla(44, 100%, 50%, 0.2);
+
+  /* 链接：双链 */
+  --link-color: hsla(210, 60%, 65%, 1);
+  --link-color-hover: hsla(210, 60%, 74%, 1);
+  --link-decoration-color: hsla(210, 60%, 65%, 0.4);
+  --link-decoration-color-hover: hsla(210, 60%, 74%, 0.7);
+
+  /* 链接：外链 */
+  --link-external-color: hsla(152, 51%, 54%, 1);
+  --link-external-color-hover: hsla(152, 51%, 63%, 1);
+  --link-external-decoration-color: hsla(152, 51%, 54%, 0.4);
+  --link-external-decoration-color-hover: hsla(152, 51%, 63%, 0.7);
+
+  /* 链接：正文裸网址 */
+  --link-ahref-color: hsla(5, 94%, 73%, 1);
+  --link-ahref-color-hover: hsla(5, 94%, 80%, 1);
+  --link-ahref-decoration-color: hsla(5, 94%, 73%, 0.4);
+  --link-ahref-decoration-color-hover: hsla(5, 94%, 80%, 0.7);
+}
