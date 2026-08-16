@@ -4456,3 +4456,21 @@ body {
     "calt", "case" 0, "ccmp", "ss03" 0, "cv01", "cv05", "cv06",
     "cv08" 0, "cv11", "cv12" 0, "cv13" 0;
 }
+
+/* 表单控件不继承 body 的 font-feature-settings —— Chromium 的 UA 样式会
+ * 用 font: -webkit-small-control 之类整体重置控件字体，连带把继承来的
+ * OpenType 特性一并丢掉。设置面板里的主题下拉框是 <select>，因此仍会
+ * 命中 ss03，把「Primary Blue」的 B 渲染成小型大写。
+ * 对控件重复声明一次同样的特性集。
+ */
+select,
+input,
+textarea,
+button,
+.dropdown,
+.setting-item-control select,
+.setting-item-control .dropdown {
+  font-feature-settings:
+    "calt", "case" 0, "ccmp", "ss03" 0, "cv01", "cv05", "cv06",
+    "cv08" 0, "cv11", "cv12" 0, "cv13" 0;
+}
