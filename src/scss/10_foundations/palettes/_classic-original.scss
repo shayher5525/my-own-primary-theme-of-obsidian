@@ -521,12 +521,12 @@ body {
     color-scheme: light;
 
     /* Grayscale */
-    --color-l-gray-10: hsla(210, 38%, 98%, 1);
-    --color-l-gray-20: hsla(210, 36%, 96%, 1);
-    --color-l-gray-30: hsla(210, 37%, 92%, 1);
-    --color-l-gray-40: hsla(210, 24%, 90%, 1);
-    --color-l-gray-50: hsla(210, 24%, 88%, 1);
-    --color-l-gray-60: hsla(210, 24%, 83%, 1);
+    --color-l-gray-10: hsla(210, 45%, 98%, 1);
+    --color-l-gray-20: hsla(210, 45%, 96%, 1);
+    --color-l-gray-30: hsla(210, 45%, 92%, 1);
+    --color-l-gray-40: hsla(210, 32%, 90%, 1);
+    --color-l-gray-50: hsla(210, 32%, 88%, 1);
+    --color-l-gray-60: hsla(210, 32%, 83%, 1);
     --color-l-gray-70: hsla(210, 15%, 70%, 1);
     --color-l-gray-80: hsla(210, 15%, 60%, 1);
     --color-l-gray-90: hsla(210, 15%, 50%, 1);
@@ -693,7 +693,7 @@ body {
     --background-modifier-border-focus: color-mix(in hsl, var(--color-l-gray-70) 60%, var(--color-l-gray-60));
 
     --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
-    --background-modifier-cover: rgba(217, 220, 224, 0.4);
+    --background-modifier-cover: rgba(210, 220, 231, 0.4);
 
     --background-modifier-warning: var(--color-l-orange-30);
     --background-modifier-warning-hover: var(--color-l-orange-20);
@@ -1647,7 +1647,7 @@ body {
     color-scheme: dark;
 
     /* Grayscale */
-    --color-d-gray-10: hsla(210, 24%, 85%, 1);
+    --color-d-gray-10: hsla(210, 32%, 85%, 1);
     --color-d-gray-20: hsla(210, 15%, 74%, 1);
     --color-d-gray-30: hsla(210, 15%, 68%, 1);
     --color-d-gray-40: hsla(210, 15%, 55%, 1);

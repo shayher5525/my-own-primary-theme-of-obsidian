@@ -17,7 +17,8 @@
 选项:
     --hue=210            目标色相
     --max-sat=14         全域饱和度上限（未指定 --curve 时生效）
-    --curve=bluetopaz    改用按亮度分段的上限，模拟 Blue Topaz 的蓝白观感
+    --curve=bluetopaz    改用按亮度分段的上下限，模拟 Blue Topaz 的蓝白观感
+                         （亮面另设下限，否则本就不饱和的浅色面不会变蓝）
     --tint-neutrals      中性灰也染上色相，使灰面呈蓝灰而非中性灰
     --accent-override    在输出末尾追加 accent 覆盖块（只对最终产物用）
 
@@ -57,12 +58,31 @@ def sat_cap(light):
     if CURVE != "bluetopaz":
         return MAX_SAT
     if light >= 92:
-        return 42.0
+        return 48.0
     if light >= 80:
-        return 24.0
+        return 32.0
     if light >= 30:
         return 15.0
     return 20.0
+
+
+def sat_floor(light):
+    """按亮度返回饱和度下限。
+
+    只设上限不够——上限是 min(原值, 上限)，只会往下压。Primary 的亮面
+    原本就是 36~39%，低于上限，因此调高上限对它们毫无作用。要让浅色面
+    真正呈冷蓝白，必须给一个下限把它们顶上去。
+
+    45% 取自 Blue Topaz 的 --simple-white-1/2（hsla(204~210, 45%, 95~97%)）。
+    只对亮面设下限：中间调和暗部一旦拔高饱和度就会显脏。
+    """
+    if CURVE != "bluetopaz":
+        return 0.0
+    if light >= 92:
+        return 45.0
+    if light >= 80:
+        return 30.0
+    return 0.0
 
 stats = {"hsl": 0, "rgb": 0, "skipped_semantic": 0, "already_neutral": 0, "tinted_neutral": 0}
 
@@ -79,7 +99,7 @@ def neutral_sat(light):
     """
     if not TINT_NEUTRALS or light >= 99 or light <= 2:
         return 0.0
-    return min(10.0, sat_cap(light))
+    return max(min(10.0, sat_cap(light)), sat_floor(light))
 
 
 def hsl_sub(m):
@@ -94,7 +114,8 @@ def hsl_sub(m):
             return f"hsl({fmt(HUE)}, {fmt(ns)}%, {fmt(light)}%)"
         return f"hsla({fmt(HUE)}, {fmt(ns)}%, {fmt(light)}%, {alpha})"
     stats["hsl"] += 1
-    s = min(float(sat), sat_cap(float(light)))
+    L = float(light)
+    s = max(min(float(sat), sat_cap(L)), sat_floor(L))
     if alpha is None:
         return f"hsl({fmt(HUE)}, {fmt(s)}%, {fmt(light)}%)"
     return f"hsla({fmt(HUE)}, {fmt(s)}%, {fmt(light)}%, {alpha})"
@@ -113,7 +134,8 @@ def rgb_sub(m):
         s = ns / 100
     else:
         stats["rgb"] += 1
-        s = min(sat * 100, sat_cap(light * 100)) / 100
+        L = light * 100
+        s = max(min(sat * 100, sat_cap(L)), sat_floor(L)) / 100
     nr, ng, nb = colorsys.hls_to_rgb(HUE / 360, light, s)
     nr, ng, nb = round(nr * 255), round(ng * 255), round(nb * 255)
     if alpha is None:
